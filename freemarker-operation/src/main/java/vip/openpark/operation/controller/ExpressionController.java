@@ -17,11 +17,11 @@ import java.util.stream.Stream;
  * @version 2024/3/22 9:10
  */
 @Controller
-@RequestMapping
-public class SearchValCommandController {
+@RequestMapping("expression")
+public class ExpressionController {
 
-    @GetMapping("searchValCommand")
-    public String searchValCommand(Model model) {
+    @GetMapping("searchVal")
+    public String searchVal(Model model) {
         // 直接取值
         model.addAttribute("permission", true);
 
@@ -49,6 +49,21 @@ public class SearchValCommandController {
         SearchValDomain searchValDomain = SearchValDomain.builder().name("杜甫").sex((byte) 1).birthday(LocalDateTime.now()).build();
         model.addAttribute("person", searchValDomain);
 
-        return "searchValCommand";
+        return "expression/searchVal";
+    }
+
+    @GetMapping("sequence")
+    public String sequence(Model model) {
+        return "expression/sequence";
+    }
+
+    @GetMapping("ranges")
+    public String ranges(Model model) {
+        return "expression/ranges";
+    }
+
+    @GetMapping("hash")
+    public String hash(Model model) {
+        return "expression/hash";
     }
 }
