@@ -43,7 +43,7 @@ public class SearchValCommandController {
                 .limit(10)
                 .map(index -> SearchValDomain.builder().name("李白" + index).sex((byte) 1).birthday(LocalDateTime.now()).build())
                 .toList();
-        model.addAttribute("list", domainList);
+        model.addAttribute("dataList", domainList);
 
         // 对象
         SearchValDomain searchValDomain = SearchValDomain.builder().name("杜甫").sex((byte) 1).birthday(LocalDateTime.now()).build();
