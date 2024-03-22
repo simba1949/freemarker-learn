@@ -9,13 +9,13 @@ import java.time.LocalDateTime;
 
 /**
  * @author anthony
- * @version 2024/3/21 21:24
+ * @version 2024/3/22 9:11
  */
 @Getter
 @Setter
 @Builder
 @ToString
-public class Person {
+public class SearchValDomain {
     private String name;
     private Byte sex;
     private LocalDateTime birthday;

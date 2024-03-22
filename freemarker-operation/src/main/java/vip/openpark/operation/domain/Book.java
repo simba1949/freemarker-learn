@@ -5,18 +5,19 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.math.BigDecimal;
 
 /**
  * @author anthony
- * @version 2024/3/21 21:24
+ * @version 2024/3/22 9:56
  */
 @Getter
 @Setter
 @Builder
 @ToString
-public class Person {
+public class Book {
     private String name;
-    private Byte sex;
-    private LocalDateTime birthday;
+    private BigDecimal price;
+
+    private Person author;
 }
